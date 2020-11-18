@@ -1,0 +1,101 @@
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Jonathan Martin Clerck" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Jclerck.io</title>
+
+    <link as="style" href="./icons.css" rel="preload" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#af00ff" />
+    <link rel="shortcut icon" href="icons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#af00ff" />
+    <meta name="msapplication-config" content="icons/browserconfig.xml" />
+    <meta name="theme-color" content="#af00ff" />
+
+    <style>
+      body {
+        background: #222;
+        color: #fff;
+        font-family: system-ui;
+        font-size: 1.5rem;
+        margin: auto;
+      }
+
+      h1 {
+        background: #000;
+        font-size: 6rem;
+        margin: auto;
+        mix-blend-mode: lighten;
+        position: relative;
+      }
+
+      h1::before {
+        background: linear-gradient(
+          to right,
+          color(display-p3 0 1 0.5),
+          color(display-p3 1 0.8 0),
+          color(display-p3 1 0 0.044),
+          color(display-p3 1 0 0.715),
+          color(display-p3 0 0.207 1)
+        );
+        content: "";
+        display: block;
+        height: 100%;
+        mix-blend-mode: multiply;
+        position: absolute;
+        width: 100%;
+      }
+
+      li {
+        margin: 0.5rem 0;
+        list-style: none;
+      }
+
+      p {
+
+      }
+
+      section {
+        height: 100vh;
+        padding: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>CSS Gradient Text</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas,
+          aut.
+        </p>
+      </section>
+    </main>
+    <script type="module">
+      const icons = document.createElement("link");
+      icons.href = "./icons.css";
+      icons.rel = "stylesheet";
+      document.head.append(icons);
+    </script>
+  </body>
+</html>
