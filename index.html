@@ -1,7 +1,7 @@
 <html dir="ltr" lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Jonathan Martin Clerck" />
+    <meta name="description" content="CV of Jonathan Martin Clerck" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Jclerck.io</title>
@@ -33,69 +33,153 @@
     <meta name="theme-color" content="#af00ff" />
 
     <style>
+      :root {
+        --color-focus: deeppink;
+        --color-primary: #fefefe;
+        --color-secondary: #222;
+      }
+
+      :focus {
+        filter: drop-shadow(0 0 0.5rem var(--color-focus));
+        outline-style: none;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --color-focus: chartreuse;
+          --color-primary: #222;
+          --color-secondary: #fefefe;
+        }
+      }
+
+      a {
+        color: var(--color-secondary);
+        text-decoration: none;
+      }
+
+      a::after {
+        content: "🔗";
+        font-size: 0.5em;
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+        padding-inline: 0.25em;
+        vertical-align: middle;
+      }
+
       body {
-        background: #222;
-        color: #fff;
+        background: var(--color-primary);
+        color: var(--color-secondary);
         font-family: system-ui;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         margin: auto;
       }
 
       h1 {
-        background: #000;
-        font-size: 6rem;
-        margin: auto;
-        mix-blend-mode: lighten;
-        position: relative;
+        text-align: center;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        margin-block: 1rem;
       }
 
-      h1::before {
-        background: linear-gradient(
-          to right,
-          color(display-p3 0 1 0.5),
-          color(display-p3 1 0.8 0),
-          color(display-p3 1 0 0.044),
-          color(display-p3 1 0 0.715),
-          color(display-p3 0 0.207 1)
-        );
-        content: "";
-        display: block;
-        height: 100%;
-        mix-blend-mode: multiply;
-        position: absolute;
-        width: 100%;
+      .personal {
+        display: flex;
+        justify-content: space-around;
+        transform: rotate(5deg) translate(0, 5vh);
       }
 
-      li {
-        margin: 0.5rem 0;
-        list-style: none;
+      .personal div {
+display: flex;
+flex-direction: column;
+align-items: center;
+transform: rotate(-5deg);
       }
 
-      p {
-
-      }
-
-      section {
-        height: 100vh;
-        padding: 2rem;
+      .personal div span {
+       float: left; 
       }
     </style>
   </head>
   <body>
     <main>
+      <h1>Jonathan Martin Clerck</h1>
+
       <section>
-        <h1>CSS Gradient Text</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas,
-          aut.
-        </p>
+        <div class="personal">
+          <div>
+            <span>Address 🏠</span>
+            <span>12/2 Flaxmill Place, Edinburgh, EH6 5QW</span>
+          </div>
+
+        <div>
+          <span>Telephone 📱</span>
+          <span>07834688184</span>
+        </div>
+
+        <div>
+          <span>Email ✉️</span>
+          <span>j.m.clerck@icloud.com</span>
+        </div>
+
+        <div>
+          <span>Website 🌍</span>
+          <a href="https://jclerck.io">jclerck.io</a>
+          <a href="https://edil.is">edil.is</a>
+        </div>
+        
+        <div>
+          <span>GitHub</span>
+          <a href="https://github.com/Jmclerck">Github/Jmclerck</a>
+        </div>
       </section>
+
+      <!-- <div class="icon square language-javascript"></div>
+      <div class="icon square language-typescript"></div>
+      <div class="icon square language-css"></div>
+      <div class="icon square language-html"></div>
+      <div class="icon square technology-angular"></div>
+      <div class="icon landscape technology-ember"></div>
+      <div class="icon square technology-react"></div>
+      <div class="icon square technology-redux"></div>
+      <div class="icon square technology-web-components"></div>
+      <div class="icon landscape tool-babel"></div>
+      <div class="icon square tool-docker"></div>
+      <div class="icon square tool-electron"></div>
+      <div class="icon square tool-git"></div>
+      <div class="icon square tool-grunt"></div>
+      <div class="icon square tool-gulp"></div>
+      <div class="icon square tool-jest"></div>
+      <div class="icon square tool-node"></div>
+      <div class="icon square tool-rollup"></div>
+      <div class="icon square tool-webpack"></div>
+      <div class="icon background landscape company-hyper-digital"></div>
+      <div class="icon background square company-ncr"></div>
+      <div class="icon square company-particle-analytics"></div>
+      <div class="icon background landscape company-seed"></div>
+      <div class="icon background landscape company-siscog"></div>
+      <div class="icon background landscape company-vertual"></div> -->
     </main>
+
     <script type="module">
       const icons = document.createElement("link");
       icons.href = "./icons.css";
       icons.rel = "stylesheet";
       document.head.append(icons);
+    </script>
+
+    <script type="module">
+      if ("serviceWorker" in navigator) {
+        if (!navigator.serviceWorker.controller) {
+          navigator.serviceWorker
+            .register("sw.js", {
+              scope: "./",
+            })
+            .then((reg) => {
+              console.log(
+                `Service worker has been registered for scope: ${reg.scope}`
+              );
+            });
+        }
+      }
     </script>
   </body>
 </html>

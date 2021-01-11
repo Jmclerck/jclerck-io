@@ -1,6 +1,6 @@
 {
   "background_color": "#af00ff",
-  "description": "Jonathan Martin Clerck Curriculum Vitae",
+  "description": "CV of Jonathan Martin Clerck",
   "dir": "ltr",
   "display": "minimal-ui",
   "lang": "English",
@@ -19,11 +19,6 @@
     {
       "src": "/images/fe6c1899-2cf1-401b-18b8-dda485874825.webPlatform.png",
       "sizes": "48x48",
-      "type": "image/png"
-    },
-    {
-      "src": "/images/1100aef8-9651-23d9-d375-8ddcbf700ff5.webPlatform.png",
-      "sizes": "1240x600",
       "type": "image/png"
     },
     {
@@ -49,11 +44,6 @@
     {
       "src": "/images/e083ed8b-babb-cd46-fd9a-5658da4be2d4.webPlatform.png",
       "sizes": "50x50",
-      "type": "image/png"
-    },
-    {
-      "src": "/images/00bc8ad9-cdc3-d081-d207-92afdb5a7ade.webPlatform.png",
-      "sizes": "620x300",
       "type": "image/png"
     },
     {
